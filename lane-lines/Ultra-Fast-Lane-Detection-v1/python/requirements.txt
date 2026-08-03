@@ -1,0 +1,18 @@
+certifi==2025.1.31
+charset-normalizer==3.4.1
+cuda-bindings==12.8.0
+cuda-python==12.8.0
+Cython==3.1.1
+idna==3.10
+Mako==1.3.9
+MarkupSafe==3.0.2
+numpy==2.2.6
+nvidia-pyindex==1.0.9
+opencv-python==4.11.0.86
+platformdirs==4.3.7
+pycuda==2025.1
+pytools==2025.1.1
+pyzed @ file:///home/wautodrive/VisionCore/lane-lines/pyzed-5.0-cp310-cp310-linux_aarch64.whl
+requests==2.32.3
+typing_extensions==4.12.2
+urllib3==2.3.0

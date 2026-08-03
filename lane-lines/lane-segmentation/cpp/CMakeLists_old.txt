@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.10)
+project(LaneSegmentationEngine)
+
+# Set C++ standard
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Find OpenCV
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
+# Jetson-specific TensorRT and CUDA paths
+set(TENSORRT_ROOT "/usr/include/aarch64-linux-gnu")
+set(CUDA_ROOT "/usr/local/cuda")
+
+# Include directories
+include_directories(
+    ${TENSORRT_ROOT}
+    ${CUDA_ROOT}/include
+)
+
+# Link directories
+link_directories(
+    ${TENSORRT_ROOT}
+    ${CUDA_ROOT}/lib64
+)
+
+# Source files
+add_executable(lane_segmentation main.cpp)
+
+# **Ensure OpenCV libraries are explicitly linked**
+target_link_libraries(lane_segmentation
+    ${OpenCV_LIBS}
+    nvinfer
+    nvonnxparser
+    cudart
+)

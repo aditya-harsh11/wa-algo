@@ -1,0 +1,10 @@
+name: ll
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+  - defaults
+dependencies:
+  - python=3.10
+  - opencv
+  - scipy
+prefix: /home/auc7us/miniconda3/envs/ll
